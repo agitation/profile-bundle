@@ -1,0 +1,17 @@
+{% extends ["::page.public.html.twig", "AppBundle:Include:page.public.html.twig", "AgitUiBundle:Include:page.public.html.twig"] %}
+
+{% agit.capability "" %}
+{% agit.status "401" %}
+{% set noindex = 1 %}
+{% block title %}{{ x("Login required", "page title") }}{% endblock %}
+
+{% block js %}
+        {% javascripts
+            "@AgitProfileBundle/Resources/public/js/var/api.js"
+            "@AgitProfileBundle/Resources/public/js/ctl/init.js"
+            "@AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js"
+            filter="?uglifyjs2"
+        %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+{% endblock %}
