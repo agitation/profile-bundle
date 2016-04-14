@@ -13,5 +13,5 @@ $(document).ready(function(){
             )
         });
 
-    $page.init();
+    $page.initialize();
 });
