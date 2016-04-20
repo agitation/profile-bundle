@@ -9,7 +9,7 @@ $(document).ready(function(){
                     new agit.elem.FormRow("password", agit.intl.t("Password"), new agit.field.Password()),
                 ],
                 new agit.elem.FormFooter(),
-                function(res) { res.success && location.reload(); }
+                function(res, status) { status === 200 && location.reload(); }
             )
         });
 
