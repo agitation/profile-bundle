@@ -6,6 +6,8 @@ use Agit\ApiBundle\Annotation\Endpoint;
 use Agit\ApiBundle\Common\AbstractEndpointClass;
 use Agit\ApiBundle\Common\AbstractObject;
 use Agit\PluggableBundle\Strategy\Depends;
+use Agit\UserBundle\Exception\UnauthorizedException;
+use Agit\ApiBundle\Exception\BadRequestException;
 
 /**
  * @Endpoint\EndpointClass
@@ -21,10 +23,17 @@ class Session extends AbstractEndpointClass
      */
     protected function login(AbstractObject $requestObject)
     {
-        $this->getService("agit.user")->login(
-            $requestObject->get('email'),
-            $requestObject->get('password')
-        );
+        try
+        {
+            $this->getService("agit.user")->login(
+                $requestObject->get('email'),
+                $requestObject->get('password')
+            );
+        }
+        catch (UnauthorizedException $e)
+        {
+            throw new BadRequestException($e->getMessage());
+        }
     }
 
     /**
