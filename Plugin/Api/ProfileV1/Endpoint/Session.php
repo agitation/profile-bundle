@@ -3,16 +3,16 @@
 namespace Agit\ProfileBundle\Plugin\Api\ProfileV1\Endpoint;
 
 use Agit\ApiBundle\Annotation\Endpoint;
-use Agit\ApiBundle\Common\AbstractEndpointClass;
+use Agit\ApiBundle\Common\AbstractController;
 use Agit\ApiBundle\Common\RequestObjectInterface;
 use Agit\PluggableBundle\Strategy\Depends;
 use Agit\UserBundle\Exception\UnauthorizedException;
 use Agit\ApiBundle\Exception\BadRequestException;
 
 /**
- * @Endpoint\EndpointClass
+ * @Endpoint\Controller
  */
-class Session extends AbstractEndpointClass
+class Session extends AbstractController
 {
     /**
      * @Endpoint\Endpoint(request="Login",response="common.v1/Null")
