@@ -4,7 +4,7 @@ namespace Agit\ProfileBundle\Plugin\Api\ProfileV1\Endpoint;
 
 use Agit\ApiBundle\Annotation\Endpoint;
 use Agit\ApiBundle\Common\AbstractEndpointClass;
-use Agit\ApiBundle\Common\AbstractObject;
+use Agit\ApiBundle\Common\RequestObjectInterface;
 use Agit\PluggableBundle\Strategy\Depends;
 use Agit\UserBundle\Exception\UnauthorizedException;
 use Agit\ApiBundle\Exception\BadRequestException;
@@ -21,7 +21,7 @@ class Session extends AbstractEndpointClass
      *
      * Authenticate to the Tixys server and start a session.
      */
-    protected function login(AbstractObject $requestObject)
+    protected function login(RequestObjectInterface $requestObject)
     {
         try
         {
@@ -43,7 +43,7 @@ class Session extends AbstractEndpointClass
      *
      * Authenticate to the Tixys server and start a session.
      */
-    protected function logout(AbstractObject $requestObject)
+    protected function logout()
     {
         $this->getService("agit.user")->logout();
     }

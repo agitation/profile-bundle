@@ -4,14 +4,14 @@ namespace Agit\ProfileBundle\Plugin\Api\ProfileV1\Object;
 
 use Agit\ApiBundle\Annotation\Object;
 use Agit\ApiBundle\Annotation\Property;
-use Agit\ApiBundle\Common\AbstractObject;
+use Agit\ApiBundle\Common\AbstractRequestObject;
 
 /**
  * @Object\Object
  *
  * Login credentials.
  */
-class Login extends AbstractObject
+class Login extends AbstractRequestObject
 {
     /**
      * @Property\StringType
