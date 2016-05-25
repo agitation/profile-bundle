@@ -1,4 +1,4 @@
-agit.api.Endpoint.register({
+ag.api.Endpoint.register({
     "profile.v1/Session.login": [
         "profile.v1/Login",
         "common.v1/Null"
@@ -8,7 +8,7 @@ agit.api.Endpoint.register({
         "common.v1/Null"
     ]
 });
-agit.api.Object.register({
+ag.api.Object.register({
     "profile.v1/Login": {
         "email": {
             "type": "string"

@@ -1,10 +1,10 @@
 $(document).ready(function() {
     var
-        ind = new agit.misc.OverlayIndicator(window),
-        msgH = new agit.misc.msgh.Modal();
+        ind = new ag.ui.elem.OverlayIndicator(window),
+        msgH = new ag.ui.elem.Modal();
 
-    agit.srv("state", new agit.context.State());
-    agit.srv("messageHandler", msgH);
-    agit.srv("indicator", ind);
-    agit.srv("api", new agit.common.Api(ind, msgH));
+    ag.srv("state", new ag.ui.ctxt.State());
+    ag.srv("messageHandler", msgH);
+    ag.srv("indicator", ind);
+    ag.srv("api", new ag.api.Api(ind, msgH));
 });

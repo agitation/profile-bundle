@@ -1,14 +1,14 @@
 $(document).ready(function(){
 
-    var $page = new agit.context.Page(
+    var $page = new ag.ui.ctxt.Page(
         agit.intl.t("Login"), {
-            form : new agit.elem.ApiForm(
+            form : new ag.ui.elem.ApiForm(
                 "profile.v1/Session.login",
                 [
-                    new agit.elem.FormRow("email", agit.intl.t("E-mail"), new agit.field.Text()),
-                    new agit.elem.FormRow("password", agit.intl.t("Password"), new agit.field.Password()),
+                    new ag.ui.elem.FormRow("email", agit.intl.t("E-mail"), new ag.ui.field.Text()),
+                    new ag.ui.elem.FormRow("password", agit.intl.t("Password"), new ag.ui.field.Password()),
                 ],
-                new agit.elem.FormFooter(),
+                new ag.ui.elem.FormFooter(),
                 function(res, status) { status === 200 && location.reload(); }
             )
         });
