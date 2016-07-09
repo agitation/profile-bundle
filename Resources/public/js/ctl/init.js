@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var
         ind = new ag.ui.elem.OverlayIndicator(window),
-        msgH = new ag.ui.elem.Modal();
+        msgH = new ag.ui.elem.ModalMessageHandler();
 
     ag.srv("state", new ag.ui.ctxt.State());
     ag.srv("messageHandler", msgH);
