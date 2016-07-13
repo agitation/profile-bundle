@@ -17,7 +17,7 @@ class Session extends AbstractController
     /**
      * @Endpoint\Endpoint(request="Login",response="common.v1/Null")
      * @Endpoint\Security(capability="")
-     * @Depends({"agit.user"})
+     * @Depends({"@agit.user"})
      *
      * Authenticate to the Tixys server and start a session.
      */
@@ -39,7 +39,7 @@ class Session extends AbstractController
     /**
      * @Endpoint\Endpoint(request="common.v1/Null",response="common.v1/Null")
      * @Endpoint\Security(capability="")
-     * @Depends({"agit.user"})
+     * @Depends({"@agit.user"})
      *
      * Authenticate to the Tixys server and start a session.
      */
