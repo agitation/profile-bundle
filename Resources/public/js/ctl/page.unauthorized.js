@@ -2,6 +2,7 @@ $(document).ready(function(){
 
     var $page = new ag.ui.ctxt.Page(
         ag.intl.t("Login"), {
+        login : new ag.ui.ctxt.View({
             form : new ag.ui.elem.ApiForm(
                 "profile.v1/Session.login",
                 [
@@ -11,7 +12,8 @@ $(document).ready(function(){
                 new ag.ui.elem.FormFooter(),
                 function(res, status) { status === 200 && location.reload(); }
             )
-        });
+        })
+    });
 
     $page.initialize();
 });
