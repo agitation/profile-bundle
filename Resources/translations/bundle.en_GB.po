@@ -5,97 +5,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "nplurals=2; plural=(n != 1);\n"
 
-#: @TixysBaseBundle/Plugin/Setting/CountrySetting.php:21
-msgid "Country"
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:4
+msgid "Login"
 msgstr ""
 
-#: @TixysBaseBundle/Plugin/Setting/CountrySetting.php:32
-msgid "The selected country is invalid."
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:9
+msgid "E-mail"
 msgstr ""
 
-#: @TixysBaseBundle/Plugin/Setting/CurrencySetting.php:21
-msgid "Currency"
-msgstr ""
-
-#: @TixysBaseBundle/Plugin/Setting/CurrencySetting.php:32
-msgid "The selected currency is invalid."
-msgstr ""
-
-#: @TixysBaseBundle/Plugin/Setting/NameSetting.php:21
-msgid "Shop Name"
-msgstr ""
-
-#: @TixysBaseBundle/Plugin/Setting/TimezoneSetting.php:21
-msgid "Default Timezone"
-msgstr ""
-
-#: @TixysBaseBundle/Plugin/Setting/TimezoneSetting.php:32
-msgid "The selected timezone is invalid."
-msgstr ""
-
-#: @TixysBaseBundle/Plugin/Validator/MultilangValidator.php:27
-#, php-format
-msgid "A translation for the `%s` language is missing."
-msgstr ""
-
-#: @TixysBaseBundle/Plugin/Validator/MultilangValidator.php:35
-msgid "Only translations to active languages are allowed."
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Special/forbidden.html.twig:34
-#: @TixysBaseBundle/Resources/views/Special/forbidden.html.twig:42
-msgctxt "page title"
-msgid "Forbidden"
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Special/forbidden.html.twig:46
-msgid "You are not allowed to access this page. Please contact an administrator to upgrade your privileges."
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Include/page.html.twig:581
-msgctxt "page title"
-msgid "Home"
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Include/include.header.html.twig:50
-msgid "Language"
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Special/unauthorized.html.twig:35
-msgctxt "page title"
-msgid "Login required"
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Special/unauthorized.html.twig:73
-msgid "Please log in"
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Special/unauthorized.html.twig:77
-msgid "You must log in to access this page."
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Special/unauthorized.html.twig:87
-msgid "E-mail address"
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Special/unauthorized.html.twig:98
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:10
 msgid "Password"
 msgstr ""
 
-#: @TixysBaseBundle/Resources/views/Special/unauthorized.html.twig:110
-msgid "Forgot your password?"
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Special/unauthorized.html.twig:120
-msgid "log in"
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Special/notfound.html.twig:34
-#: @TixysBaseBundle/Resources/views/Special/notfound.html.twig:42
+#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:42
 msgctxt "page title"
-msgid "Page not found"
-msgstr ""
-
-#: @TixysBaseBundle/Resources/views/Special/notfound.html.twig:46
-msgid "The requested page could not be found. Please check the spelling of the address, or notify the owner of the referring web page."
+msgid "Login required"
 msgstr ""
