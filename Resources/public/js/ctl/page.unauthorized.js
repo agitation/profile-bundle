@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
-    var $page = new ag.ui.ctxt.Page(
-        ag.intl.t("Login"), {
+    var $page = new ag.ui.ctxt.Page({
         login : new ag.ui.ctxt.View({
             form : new ag.ui.elem.ApiForm(
                 "profile.v1/Session.login",
