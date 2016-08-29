@@ -1,23 +1,22 @@
 msgid ""
 msgstr ""
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:4
-msgid "Login"
-msgstr ""
-
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:8
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:8
 #: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:9
+#: @TixysCommonAdminBundle/Resources/public/js/ctl/admin.bookings.customers.js:39
 msgid "E-mail"
 msgstr ""
 
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:9
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:9
 #: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:10
 msgid "Password"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:42
-msgctxt "page title"
+#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:42
 msgid "Login required"
 msgstr ""
