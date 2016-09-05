@@ -5,7 +5,7 @@ namespace Agit\ProfileBundle\Plugin\Api\ProfileV1\Endpoint;
 use Agit\ApiBundle\Annotation\Endpoint;
 use Agit\ApiBundle\Common\AbstractController;
 use Agit\ApiBundle\Common\RequestObjectInterface;
-use Agit\PluggableBundle\Strategy\Depends;
+use Agit\BaseBundle\Pluggable\Depends;
 use Agit\UserBundle\Exception\UnauthorizedException;
 use Agit\ApiBundle\Exception\BadRequestException;
 
