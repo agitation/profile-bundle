@@ -1,13 +1,20 @@
 <?php
 
+/*
+ * @package    agitation/profile-bundle
+ * @link       http://github.com/agitation/profile-bundle
+ * @author     Alexander Günsche
+ * @license    http://opensource.org/licenses/MIT
+ */
+
 namespace Agit\ProfileBundle\Plugin\Api\ProfileV1\Endpoint;
 
 use Agit\ApiBundle\Annotation\Endpoint;
 use Agit\ApiBundle\Common\AbstractController;
 use Agit\ApiBundle\Common\RequestObjectInterface;
+use Agit\ApiBundle\Exception\BadRequestException;
 use Agit\BaseBundle\Pluggable\Depends;
 use Agit\UserBundle\Exception\UnauthorizedException;
-use Agit\ApiBundle\Exception\BadRequestException;
 
 /**
  * @Endpoint\Controller
@@ -23,15 +30,12 @@ class Session extends AbstractController
      */
     protected function login(RequestObjectInterface $requestObject)
     {
-        try
-        {
+        try {
             $this->getService("agit.user")->login(
                 $requestObject->get('email'),
                 $requestObject->get('password')
             );
-        }
-        catch (UnauthorizedException $e)
-        {
+        } catch (UnauthorizedException $e) {
             throw new BadRequestException($e->getMessage());
         }
     }
