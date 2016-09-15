@@ -37,7 +37,7 @@ class Session extends AbstractController
      *
      * Authenticate to the Tixys server and start a session.
      */
-    protected function login(RequestObjectInterface $requestObject)
+    public function login(RequestObjectInterface $requestObject)
     {
         try {
             $this->userService->login(
@@ -55,7 +55,7 @@ class Session extends AbstractController
      *
      * Authenticate to the Tixys server and start a session.
      */
-    protected function logout()
+    public function logout()
     {
         $this->userService->logout();
     }
