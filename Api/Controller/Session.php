@@ -7,33 +7,42 @@
  * @license    http://opensource.org/licenses/MIT
  */
 
-namespace Agit\ProfileBundle\Plugin\Api\ProfileV1\Endpoint;
+namespace Agit\ProfileBundle\Api\Controller;
 
+use Agit\ApiBundle\Annotation\Controller\Controller;
 use Agit\ApiBundle\Annotation\Endpoint;
-use Agit\ApiBundle\Common\AbstractController;
-use Agit\ApiBundle\Common\RequestObjectInterface;
+use Agit\ApiBundle\Api\Controller\AbstractController;
+use Agit\ApiBundle\Api\Object\RequestObjectInterface;
 use Agit\ApiBundle\Exception\BadRequestException;
-use Agit\BaseBundle\Pluggable\Depends;
+use Agit\ApiBundle\Annotation\Depends;
 use Agit\UserBundle\Exception\UnauthorizedException;
+use Agit\UserBundle\Service\UserService;
 
 /**
- * @Endpoint\Controller
+ * @Controller(namespace="profile.v1")
+ * @Depends({"@agit.user"})
  */
 class Session extends AbstractController
 {
+    private $userService;
+
+    public function __construct(UserService $userService)
+    {
+        $this->userService = $userService;
+    }
+
     /**
      * @Endpoint\Endpoint(request="Login",response="common.v1/Null")
      * @Endpoint\Security(capability="")
-     * @Depends({"@agit.user"})
      *
      * Authenticate to the Tixys server and start a session.
      */
     protected function login(RequestObjectInterface $requestObject)
     {
         try {
-            $this->getService("agit.user")->login(
-                $requestObject->get('email'),
-                $requestObject->get('password')
+            $this->userService->login(
+                $requestObject->get("email"),
+                $requestObject->get("password")
             );
         } catch (UnauthorizedException $e) {
             throw new BadRequestException($e->getMessage());
@@ -43,12 +52,11 @@ class Session extends AbstractController
     /**
      * @Endpoint\Endpoint(request="common.v1/Null",response="common.v1/Null")
      * @Endpoint\Security(capability="")
-     * @Depends({"@agit.user"})
      *
      * Authenticate to the Tixys server and start a session.
      */
     protected function logout()
     {
-        $this->getService("agit.user")->logout();
+        $this->userService->logout();
     }
 }

@@ -7,14 +7,14 @@
  * @license    http://opensource.org/licenses/MIT
  */
 
-namespace Agit\ProfileBundle\Plugin\Api\ProfileV1\Object;
+namespace Agit\ProfileBundle\Api\Object;
 
-use Agit\ApiBundle\Annotation\Object;
+use Agit\ApiBundle\Annotation\Object\Object;
 use Agit\ApiBundle\Annotation\Property;
-use Agit\ApiBundle\Common\AbstractRequestObject;
+use Agit\ApiBundle\Api\Object\AbstractRequestObject;
 
 /**
- * @Object\Object
+ * @Object(namespace="profile.v1")
  *
  * Login credentials.
  */
