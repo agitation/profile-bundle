@@ -5,6 +5,16 @@
 {% set noindex = 1 %}
 {% block title %}{{ t("Login required") }}{% endblock %}
 
+{% block config_js %}
+    <script type="text/javascript">/* <![CDATA[ */
+        window.ag = window.ag || {};
+        ag.cfg = ag.cfg || {};
+        ag.cfg.locale = "{{ locale }}";
+        ag.cfg.apiBaseUrl = "{{ getApiUrlBase() }}";
+        ag.cfg.csrfToken = "{{ getCsrfToken() }}";
+    /* ]]> */</script>
+{% endblock %}
+
 {% block js %}
         {% javascripts
             "@AgitUiBundle/Resources/public/js/lib/elem/ApiForm.js"
