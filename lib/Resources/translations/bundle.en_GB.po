@@ -3,20 +3,14 @@ msgstr ""
 "Language: en_GB\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:8
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:8
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:9
-#: @TixysCommonAdminBundle/Resources/public/js/ctl/admin.bookings.customers.js:39
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:6
 msgid "E-mail"
 msgstr ""
 
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:9
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:9
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:10
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:7
 msgid "Password"
 msgstr ""
 
-#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:42
-#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:42
+#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:43
 msgid "Login required"
 msgstr ""
