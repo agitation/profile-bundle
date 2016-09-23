@@ -5,12 +5,12 @@ msgstr ""
 
 #: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:6
 msgid "E-mail"
-msgstr ""
+msgstr "E-Mail"
 
 #: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:7
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 #: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:43
 msgid "Login required"
-msgstr ""
+msgstr "Login erforderlich"
