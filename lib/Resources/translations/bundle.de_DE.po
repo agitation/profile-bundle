@@ -3,14 +3,73 @@ msgstr ""
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:6
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:4
+#: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:9
 msgid "E-mail"
 msgstr "E-Mail"
 
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:7
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:5
 msgid "Password"
 msgstr "Passwort"
 
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:13
 #: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:43
 msgid "Login required"
 msgstr "Login erforderlich"
+
+#: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:5
+#: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:18
+#: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:23
+#: @AgitProfileBundle/Resources/views/Page/user/newpass.html.twig:45
+msgid "Password update"
+msgstr ""
+
+#: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:6
+msgid "If you have forgotten your password, please enter your e-mail address and a new password. You will receive an e-mail with instructions for resetting your password."
+msgstr ""
+
+#: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:10
+msgid "New password"
+msgstr ""
+
+#: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:19
+msgid "A confirmation e-mail has been sent. Please check your inbox for further instructions."
+msgstr ""
+
+#: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:25
+msgid "Updating your password, please wait."
+msgstr ""
+
+#: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:26
+msgid "Your password has been updated successfully."
+msgstr ""
+
+#: @AgitProfileBundle/Service/PasswordService.php:77
+msgid "Password reset"
+msgstr ""
+
+#: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:22
+msgid "Hello %,"
+msgstr ""
+
+#: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:27
+msgid "You have requested to reset your password. Please go to the following page and enter your new password:"
+msgstr ""
+
+#: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:37
+msgid "Sincerely,"
+msgstr ""
+
+#: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:41
+msgid "the support team"
+msgstr ""
+
+#: @AgitProfileBundle/Api/Object/PasswordReset.php
+#: @AgitProfileBundle/Api/Object/Login.php
+msgid "email"
+msgstr ""
+
+#: @AgitProfileBundle/Api/Object/PasswordReset.php
+#: @AgitProfileBundle/Api/Object/Login.php
+msgid "password"
+msgstr ""

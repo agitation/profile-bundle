@@ -1,0 +1,48 @@
+{% extends ["::page.html.twig", "AppBundle:Include:page.html.twig", "AgitUiBundle:Include:page.html.twig"] %}
+
+{% agit.capability "" %}
+{% set noindex = 1 %}
+{% block name %}{{ t("Password update") }}{% endblock %}
+
+{% block config_js %}
+    <script type="text/javascript">/* <![CDATA[ */
+        window.ag = window.ag || {};
+        ag.cfg = ag.cfg || {};
+        ag.cfg.locale = "{{ locale }}";
+        ag.cfg.baseUrl = "{{ getAppUrlBase() }}";
+        ag.cfg.apiBaseUrl = "{{ getApiUrlBase() }}";
+        ag.cfg.csrfToken = "{{ getCsrfToken() }}";
+    /* ]]> */</script>
+{% endblock %}
+
+{% block css %}
+    {% stylesheets
+        "@AgitTriggerBundle/Resources/public/css/handler.css"
+        filter="?cleancss"
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block js %}
+        {% javascripts
+
+            "@AgitUiBundle/Resources/public/js/lib/elem/Form.js"
+            "@AgitUiBundle/Resources/public/js/lib/elem/FormRow.js"
+
+            "@AgitTriggerBundle/Resources/public/js/lib/TriggerHandler.js"
+
+            "@AgitProfileBundle/Resources/public/js/var/translations.js"
+            "@AgitProfileBundle/Resources/public/js/var/api.js"
+            "@AgitProfileBundle/Resources/public/js/ctl/init.js"
+            "@AgitProfileBundle/Resources/public/js/ctl/page.newpass.js"
+
+            filter="?uglifyjs2"
+        %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+{% endblock %}
+
+{% block templates %}
+    {% include "AgitTriggerBundle:Include:template.handler.html.twig" %}
+{% endblock %}
