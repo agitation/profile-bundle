@@ -1,0 +1,13 @@
+services :
+    agit.profile.password :
+        class : Agit\ProfileBundle\Service\PasswordService
+        tags : [{ name: kernel.event_listener, event: agit.trigger, method: updatePassword }]
+        arguments :
+            - "@doctrine.orm.entity_manager"
+            - "@agit.user"
+            - "@mailer"
+            - "@templating"
+            - "@agit.trigger"
+            - "@agit.common.url"
+            - "%agit.mail.from%"
+            - "%agit.mail.replyto%"
