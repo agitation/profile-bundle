@@ -14,8 +14,8 @@ msgstr "E-Mail"
 msgid "Password"
 msgstr "Passwort"
 
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:13
-#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:43
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:14
+#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:44
 msgid "Login required"
 msgstr "Login erforderlich"
 
@@ -46,9 +46,17 @@ msgstr "Das Passwort wird aktualisiert, bitte warten."
 msgid "Your password has been updated successfully."
 msgstr "Das Passwort wurde erfolgreich aktualisiert."
 
-#: @AgitProfileBundle/Service/PasswordService.php:77
+#: @AgitProfileBundle/Service/PasswordService.php:78
 msgid "Password reset"
 msgstr "Passwort zurücksetzen"
+
+#: @AgitProfileBundle/Resources/views/Include/template.unauthorized.html.twig:30
+msgid "submit"
+msgstr "absenden"
+
+#: @AgitProfileBundle/Resources/views/Include/template.unauthorized.html.twig:36
+msgid "forgot your password?"
+msgstr "Passwort vergessen?"
 
 #: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:22
 msgid "Hello %s,"

@@ -16,16 +16,21 @@
 {% endblock %}
 
 {% block js %}
-        {% javascripts
-            "@AgitUiBundle/Resources/public/js/lib/elem/Form.js"
-            "@AgitUiBundle/Resources/public/js/lib/elem/FormRow.js"
+    {% javascripts
+        "@AgitUiBundle/Resources/public/js/lib/elem/Form.js"
+        "@AgitUiBundle/Resources/public/js/lib/elem/FormRow.js"
+        "@AgitUiBundle/Resources/public/js/lib/elem/FormFooter.js"
 
-            "@AgitProfileBundle/Resources/public/js/var/translations.js"
-            "@AgitProfileBundle/Resources/public/js/var/api.js"
-            "@AgitProfileBundle/Resources/public/js/ctl/init.js"
-            "@AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js"
-            filter="?uglifyjs2"
-        %}
-        <script src="{{ asset_url }}" type="text/javascript"></script>
-        {% endjavascripts %}
+        "@AgitProfileBundle/Resources/public/js/var/translations.js"
+        "@AgitProfileBundle/Resources/public/js/var/api.js"
+        "@AgitProfileBundle/Resources/public/js/ctl/init.js"
+        "@AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js"
+        filter="?uglifyjs2"
+    %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block templates %}
+    {% include "AgitProfileBundle:Include:template.unauthorized.html.twig" %}
 {% endblock %}

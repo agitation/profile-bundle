@@ -14,8 +14,8 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:13
-#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:43
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:14
+#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:44
 msgid "Login required"
 msgstr ""
 
@@ -46,8 +46,16 @@ msgstr ""
 msgid "Your password has been updated successfully."
 msgstr ""
 
-#: @AgitProfileBundle/Service/PasswordService.php:77
+#: @AgitProfileBundle/Service/PasswordService.php:78
 msgid "Password reset"
+msgstr ""
+
+#: @AgitProfileBundle/Resources/views/Include/template.unauthorized.html.twig:30
+msgid "submit"
+msgstr ""
+
+#: @AgitProfileBundle/Resources/views/Include/template.unauthorized.html.twig:36
+msgid "forgot your password?"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:22
