@@ -5,10 +5,12 @@ msgstr ""
 
 #: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:4
 #: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:9
+#: @AgitProfileBundle/Api/Object/Login.php
 msgid "E-mail"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:5
+#: @AgitProfileBundle/Api/Object/Login.php
 msgid "Password"
 msgstr ""
 
@@ -49,27 +51,21 @@ msgid "Password reset"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:22
-msgid "Hello %,"
+msgid "Hello %s,"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:27
-msgid "You have requested to reset your password. Please go to the following page and enter your new password:"
+msgid "You have requested to reset your password. Please go to the following page to confirm this:"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:37
+msgid "Please note: If you received this e-mail without having requested a new password, you may safely ignore this e-mail. No changes will be made to your user account."
+msgstr ""
+
+#: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:42
 msgid "Sincerely,"
 msgstr ""
 
-#: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:41
-msgid "the support team"
-msgstr ""
-
-#: @AgitProfileBundle/Api/Object/PasswordReset.php
-#: @AgitProfileBundle/Api/Object/Login.php
-msgid "email"
-msgstr ""
-
-#: @AgitProfileBundle/Api/Object/PasswordReset.php
-#: @AgitProfileBundle/Api/Object/Login.php
-msgid "password"
+#: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:46
+msgid "your support team"
 msgstr ""

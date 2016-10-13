@@ -21,7 +21,7 @@ use Agit\ApiBundle\Api\Object\AbstractRequestObject;
 class Login extends AbstractRequestObject
 {
     /**
-     * @Property\Name("E-Mail")
+     * @Property\Name("E-mail")
      * @Property\StringType
      *
      * The user’s name (i.e. e-mail address)
