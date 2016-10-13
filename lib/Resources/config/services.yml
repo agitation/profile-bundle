@@ -8,6 +8,6 @@ services :
             - "@mailer"
             - "@templating"
             - "@agit.trigger"
-            - "@agit.common.url"
+            - "@agit.page"
             - "%agit.mail.from%"
             - "%agit.mail.replyto%"

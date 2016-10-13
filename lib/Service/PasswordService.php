@@ -20,6 +20,7 @@ use Agit\ApiBundle\Exception\BadRequestException;
 use Agit\ApiBundle\Annotation\Depends;
 use Agit\BaseBundle\Service\UrlService;
 use Agit\IntlBundle\Tool\Translate;
+use Agit\PageBundle\Service\PageService;
 use Agit\TriggerBundle\Service\TriggerData;
 use Agit\TriggerBundle\Service\TriggerEvent;
 use Agit\TriggerBundle\Service\TriggerService;
@@ -41,7 +42,7 @@ class PasswordService
 
     private $templatingService;
 
-    private $urlService;
+    private $pageService;
 
     private $mailFrom;
 
@@ -53,14 +54,14 @@ class PasswordService
         Swift_Mailer $mailerService,
         TwigEngine $templatingService,
         TriggerService $triggerService,
-        UrlService $urlService,
+        PageService $pageService,
         $mailFrom,
         $mailReplyto
     )
     {
         $this->entityManager = $entityManager;
         $this->userService = $userService;
-        $this->urlService = $urlService;
+        $this->pageService = $pageService;
         $this->mailerService = $mailerService;
         $this->templatingService = $templatingService;
         $this->triggerService = $triggerService;
@@ -86,7 +87,7 @@ class PasswordService
             "AgitProfileBundle:Mail:passreset.txt.twig",
             [
                 "name" => $user->getName(),
-                "url" => $this->urlService->createAppUrl("/user/newpass#!/confirm?$token")
+                "url" => $this->pageService->createUrl("/user/newpass") . "#!/confirm?$token"
             ]
         ), "text/plain");
 
