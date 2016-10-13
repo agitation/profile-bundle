@@ -35,7 +35,7 @@ class Session extends AbstractController
      * @Endpoint\Endpoint(request="Login",response="common.v1/Null")
      * @Endpoint\Security(capability="")
      *
-     * Authenticate to the Tixys server and start a session.
+     * Authenticate to the server and start a session.
      */
     public function login(RequestObjectInterface $requestObject)
     {
@@ -53,7 +53,7 @@ class Session extends AbstractController
      * @Endpoint\Endpoint(request="common.v1/Null",response="common.v1/Null")
      * @Endpoint\Security(capability="")
      *
-     * Authenticate to the Tixys server and start a session.
+     * Terminate an authenticated session.
      */
     public function logout()
     {
