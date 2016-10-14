@@ -10,11 +10,11 @@
 namespace Agit\ProfileBundle\Api\Controller;
 
 use Agit\ApiBundle\Annotation\Controller\Controller;
+use Agit\ApiBundle\Annotation\Depends;
 use Agit\ApiBundle\Annotation\Endpoint;
 use Agit\ApiBundle\Api\Controller\AbstractController;
 use Agit\ApiBundle\Api\Object\RequestObjectInterface;
 use Agit\ApiBundle\Exception\BadRequestException;
-use Agit\ApiBundle\Annotation\Depends;
 use Agit\UserBundle\Exception\UnauthorizedException;
 use Agit\UserBundle\Service\UserService;
 

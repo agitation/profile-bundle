@@ -9,16 +9,6 @@
 
 namespace Agit\ProfileBundle\Service;
 
-use Exception;
-use Swift_Mailer;
-use Swift_Message;
-use Agit\ApiBundle\Annotation\Controller\Controller;
-use Agit\ApiBundle\Annotation\Endpoint;
-use Agit\ApiBundle\Api\Controller\AbstractController;
-use Agit\ApiBundle\Api\Object\RequestObjectInterface;
-use Agit\ApiBundle\Exception\BadRequestException;
-use Agit\ApiBundle\Annotation\Depends;
-use Agit\BaseBundle\Service\UrlService;
 use Agit\IntlBundle\Tool\Translate;
 use Agit\PageBundle\Service\PageService;
 use Agit\TriggerBundle\Service\TriggerData;
@@ -26,6 +16,8 @@ use Agit\TriggerBundle\Service\TriggerEvent;
 use Agit\TriggerBundle\Service\TriggerService;
 use Agit\UserBundle\Service\UserService;
 use Doctrine\ORM\EntityManagerInterface;
+use Swift_Mailer;
+use Swift_Message;
 use Symfony\Bundle\TwigBundle\TwigEngine;
 
 class PasswordService
@@ -57,8 +49,7 @@ class PasswordService
         PageService $pageService,
         $mailFrom,
         $mailReplyto
-    )
-    {
+    ) {
         $this->entityManager = $entityManager;
         $this->userService = $userService;
         $this->pageService = $pageService;
@@ -76,18 +67,18 @@ class PasswordService
 
         $message = Swift_Message::newInstance()
             ->setSubject(Translate::t("Password reset"))
-            ->setFrom([ $this->mailFrom => "Customer Service" ])
-            ->setReplyTo([ $this->mailReplyto => "Customer Service" ])
-            ->setTo([ $user->getEmail() => $user->getName() ]);
+            ->setFrom([$this->mailFrom => "Customer Service"])
+            ->setReplyTo([$this->mailReplyto => "Customer Service"])
+            ->setTo([$user->getEmail() => $user->getName()]);
 
-        $trigger = new TriggerData([ "id" => $user->getId(), "encPass" => $encPass ]);
+        $trigger = new TriggerData(["id" => $user->getId(), "encPass" => $encPass]);
         $token = $this->triggerService->createTrigger(self::TRIGGER_TAG, $trigger);
 
         $message->setBody($this->templatingService->render(
             "AgitProfileBundle:Mail:passreset.txt.twig",
             [
                 "name" => $user->getName(),
-                "url" => $this->pageService->createUrl("/user/newpass") . "#!/confirm?$token"
+                "url"  => $this->pageService->createUrl("/user/newpass") . "#!/confirm?$token"
             ]
         ), "text/plain");
 

@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * @package    agitation/profile-bundle
+ * @link       http://github.com/agitation/profile-bundle
+ * @author     Alexander Günsche
+ * @license    http://opensource.org/licenses/MIT
+ */
+
 namespace Agit\ProfileBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
