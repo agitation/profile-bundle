@@ -8,6 +8,7 @@
         "agitation/api-bundle": "dev-master",
         "agitation/page-bundle": "dev-master",
         "agitation/ui-bundle": "dev-master",
+        "agitation/trigger-bundle": "dev-master",
         "agitation/user-bundle": "dev-master"
     },
     "autoload": {
