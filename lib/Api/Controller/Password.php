@@ -30,7 +30,7 @@ class Password extends AbstractController
     }
 
     /**
-     * @Endpoint\Endpoint(request="Login", response="common.v1/Null")
+     * @Endpoint\Endpoint(request="Login", response="common.v1/ScalarNull")
      * @Endpoint\Security(capability="")
      *
      * Initiate the “password forgotten” process.

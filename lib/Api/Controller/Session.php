@@ -32,7 +32,7 @@ class Session extends AbstractController
     }
 
     /**
-     * @Endpoint\Endpoint(request="Login",response="common.v1/Null")
+     * @Endpoint\Endpoint(request="Login",response="common.v1/ScalarNull")
      * @Endpoint\Security(capability="")
      *
      * Authenticate to the server and start a session.
@@ -50,7 +50,7 @@ class Session extends AbstractController
     }
 
     /**
-     * @Endpoint\Endpoint(request="common.v1/Null",response="common.v1/Null")
+     * @Endpoint\Endpoint(request="common.v1/ScalarNull",response="common.v1/ScalarNull")
      * @Endpoint\Security(capability="")
      *
      * Terminate an authenticated session.
