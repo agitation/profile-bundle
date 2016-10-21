@@ -15,14 +15,14 @@ msgid "Password"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:14
-#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:44
+#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:43
 msgid "Login required"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:5
 #: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:18
 #: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:23
-#: @AgitProfileBundle/Resources/views/Page/user/newpass.html.twig:45
+#: @AgitProfileBundle/Resources/views/Page/user/newpass.html.twig:44
 msgid "Password update"
 msgstr ""
 
@@ -46,7 +46,7 @@ msgstr ""
 msgid "Your password has been updated successfully."
 msgstr ""
 
-#: @AgitProfileBundle/Service/PasswordService.php:78
+#: @AgitProfileBundle/Service/PasswordService.php:69
 msgid "Password reset"
 msgstr ""
 
@@ -56,6 +56,14 @@ msgstr ""
 
 #: @AgitProfileBundle/Resources/views/Include/template.unauthorized.html.twig:36
 msgid "forgot your password?"
+msgstr ""
+
+#: @AgitProfileBundle/Resources/views/Include/template.menu.html.twig:26
+msgid "Profile"
+msgstr ""
+
+#: @AgitProfileBundle/Resources/views/Include/template.menu.html.twig:31
+msgid "log out"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/views/Mail/passreset.txt.twig:22
