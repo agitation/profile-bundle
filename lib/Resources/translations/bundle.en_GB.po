@@ -3,18 +3,18 @@ msgstr ""
 "Language: en_GB\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:4
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:6
 #: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:9
 #: @AgitProfileBundle/Api/Object/Login.php
 msgid "E-mail"
 msgstr ""
 
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:5
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:7
 #: @AgitProfileBundle/Api/Object/Login.php
 msgid "Password"
 msgstr ""
 
-#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:14
+#: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:22
 #: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:43
 msgid "Login required"
 msgstr ""
