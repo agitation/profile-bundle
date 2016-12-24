@@ -15,14 +15,14 @@ msgid "Password"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/public/js/ctl/page.unauthorized.js:22
-#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:43
+#: @AgitProfileBundle/Resources/views/Special/unauthorized.html.twig:1
 msgid "Login required"
 msgstr ""
 
 #: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:5
 #: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:18
 #: @AgitProfileBundle/Resources/public/js/ctl/page.newpass.js:23
-#: @AgitProfileBundle/Resources/views/Page/user/newpass.html.twig:44
+#: @AgitProfileBundle/Resources/views/Page/user/newpass.html.twig:1
 msgid "Password update"
 msgstr ""
 
