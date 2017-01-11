@@ -15,13 +15,12 @@
 
 {% block js %}
         {% javascripts
-
             "@AgitUiBundle/Resources/public/js/lib/elem/Form.js"
             "@AgitUiBundle/Resources/public/js/lib/elem/FormRow.js"
-            "@AgitUiBundle/Resources/public/js/lib/elem/FormFooter.js"
+            "@AgitUiBundle/Resources/public/js/lib/field/Password.js"
 
             "@AgitTriggerBundle/Resources/public/js/lib/TriggerHandler.js"
-
+            "@AgitProfileBundle/Resources/public/js/lib/Form.js"
             "@AgitProfileBundle/Resources/public/js/var/translations.js"
             "@AgitProfileBundle/Resources/public/js/var/api.js"
             "@AgitProfileBundle/Resources/public/js/ctl/page.newpass.js"
@@ -34,4 +33,5 @@
 
 {% block templates %}
     {% include "AgitTriggerBundle:Include:template.handler.html.twig" %}
+    {% include "AgitProfileBundle:Include:template.form.html.twig" %}
 {% endblock %}
