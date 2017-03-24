@@ -1,0 +1,23 @@
+{% extends ["::page.profile.html.twig", "AppBundle:Include:page.profile.html.twig", "AgitUiBundle:Include:page.html.twig"] %}
+
+{% block config_js %}
+    <script type="text/javascript">/* <![CDATA[ */
+        window.ag = window.ag || {};
+        ag.cfg = ag.cfg || {};
+        ag.cfg.locale = "{{ locale }}";
+        ag.cfg.baseUrl = "{{ getAppUrlBase() }}";
+        ag.cfg.apiBaseUrl = "{{ getApiUrlBase() }}";
+        ag.cfg.csrfToken = "{{ getCsrfToken() }}";
+        ag.cfg.languages = {{ getPageLocaleUrls()|json_encode()|raw }};
+    /* ]]> */</script>
+{% endblock %}
+
+{% block area_js %}
+    {% javascripts
+        "@AgitProfileBundle/Resources/public/js/ctl/init.js"
+
+        filter="?uglifyjs2"
+    %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
