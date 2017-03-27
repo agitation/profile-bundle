@@ -12,12 +12,43 @@
     /* ]]> */</script>
 {% endblock %}
 
+{% block area_meta %}
+    {% include "AgitPageBundle:Include:include.links.html.twig" %}
+{% endblock %}
+
+{% block area_css %}
+    {% stylesheets
+        "@AgitUiBundle/Resources/public/css/spinner.css"
+        "@AgitUiBundle/Resources/public/css/indicator.css"
+
+        filter="?cleancss"
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+    {% endstylesheets %}
+{% endblock %}
+
 {% block area_js %}
     {% javascripts
+        "@AgitApiBundle/Resources/public/js/lib/Api.js"
+        "@AgitApiBundle/Resources/public/js/lib/ApiError.js"
+        "@AgitApiBundle/Resources/public/js/lib/Endpoint.js"
+        "@AgitApiBundle/Resources/public/js/lib/Object.js"
+        "@AgitApiBundle/Resources/public/js/lib/Indicator.js"
+        "@AgitApiBundle/Resources/public/js/var/api.js"
+
+        "@AgitUiBundle/Resources/public/js/lib/elem/Spinner.js"
+        "@AgitUiBundle/Resources/public/js/lib/elem/OverlayIndicator.js"
+
+        "@AgitProfileBundle/Resources/public/js/var/translations.js"
+        "@AgitProfileBundle/Resources/public/js/var/api.js"
         "@AgitProfileBundle/Resources/public/js/ctl/init.js"
 
         filter="?uglifyjs2"
     %}
     <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
+{% endblock %}
+
+{% block area_templates %}
+    {% include "AgitUiBundle:Include:template.indicator.html.twig" %}
 {% endblock %}
