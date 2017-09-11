@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * @package    agitation/profile-bundle
  * @link       http://github.com/agitation/profile-bundle
@@ -38,8 +38,8 @@ class Password extends AbstractController
     public function reset(Login $login)
     {
         $this->passwordService->registerPasswordReset(
-            $login->get("email"),
-            $login->get("password")
+            $login->get('email'),
+            $login->get('password')
         );
     }
 }

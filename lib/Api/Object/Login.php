@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * @package    agitation/profile-bundle
  * @link       http://github.com/agitation/profile-bundle

@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * @package    agitation/profile-bundle
  * @link       http://github.com/agitation/profile-bundle
@@ -39,12 +39,15 @@ class Session extends AbstractController
      */
     public function login(RequestObjectInterface $requestObject)
     {
-        try {
+        try
+        {
             $this->userService->login(
-                $requestObject->get("email"),
-                $requestObject->get("password")
+                $requestObject->get('email'),
+                $requestObject->get('password')
             );
-        } catch (UnauthorizedException $e) {
+        }
+        catch (UnauthorizedException $e)
+        {
             throw new BadRequestException($e->getMessage());
         }
     }
