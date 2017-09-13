@@ -9,5 +9,5 @@ services :
             - "@templating"
             - "@agit.trigger"
             - "@agit.page"
-            - "%agit.mail.from%"
-            - "%agit.mail.replyto%"
+            - "%agit_mail_from%"
+            - "%agit_mail_replyto%"
